@@ -1,6 +1,9 @@
 export default function ReservationCard(reservation) {
   const {
+
+    // Identificador de la reserva para acciones como editar o eliminar
     id,
+
     workspace,
     date,
     startHour,
@@ -45,14 +48,22 @@ export default function ReservationCard(reservation) {
         <div class="flex gap-2">
 
           <button
+
+            // Guarda el id de la reserva seleccionada
             data-id="${id}"
+
+            // Clase utilizada para identificar el botón de edición
             class="editReservation bg-yellow-500 text-white px-3 py-1 rounded"
           >
             Editar
           </button>
 
           <button
+
+            // Guarda el id de la reserva seleccionada
             data-id="${id}"
+
+            // Clase utilizada para identificar el botón de eliminación
             class="deleteReservation bg-red-600 text-white px-3 py-1 rounded"
           >
             Eliminar

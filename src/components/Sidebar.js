@@ -7,8 +7,10 @@ export default function Sidebar() {
       .querySelector("#logoutBtn")
       ?.addEventListener("click", () => {
 
+        // Elimina la información de la sesión almacenada
         removeSession();
 
+        // Redirige al usuario a la pantalla de inicio de sesión
         navigateTo("/");
 
       });

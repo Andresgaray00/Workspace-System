@@ -6,7 +6,7 @@ import { isAuthenticated } from "@/utils";
 const routes = {
   "/": loginView,
   "/home": homeView,
-  "/reservation": reservationView,
+  "/reservation": reservationView, // Ruta agregada para acceder al formulario de creación de reservas
 };
 
 export const navigateTo = (path) => {

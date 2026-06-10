@@ -1,7 +1,10 @@
 import ReservationCard from "@components/ReservationCard";
 import {
   getReservations,
+
+  // Servicio agregado para eliminar reservas
   deleteReservation,
+
 } from "@services/reservation.service";
 import { getSession } from "@/utils";
 
@@ -41,6 +44,7 @@ export const homeController = async () => {
         </div>
       `;
 
+  // Eventos agregados para eliminar reservas desde las tarjetas
   document
     .querySelectorAll(
       ".deleteReservation"
@@ -49,6 +53,7 @@ export const homeController = async () => {
       button.addEventListener(
         "click",
         async () => {
+
           const id =
             button.dataset.id;
 
@@ -61,11 +66,15 @@ export const homeController = async () => {
             return;
 
           try {
+
+            // Elimina la reserva seleccionada
             await deleteReservation(
               id
             );
 
+            // Recarga la lista de reservas actualizada
             await homeController();
+
           } catch (error) {
             console.error(
               error

@@ -24,16 +24,6 @@
   ],
   "reservations": [
     {
-      "id": "2",
-      "userId": 3,
-      "workspace": "Sala B",
-      "date": "2026-01-15",
-      "startHour": "10:00",
-      "endHour": "11:00",
-      "reason": "Daily Meeting",
-      "status": "approved"
-    },
-    {
       "userId": "2",
       "workspace": "Sala kj",
       "date": "2026-07-16",
